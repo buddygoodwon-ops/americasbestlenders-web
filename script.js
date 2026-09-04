@@ -15,14 +15,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Application form handling (placeholder - integrate with real form)
+    // Application form handling with Jotform integration
     const applyButtons = document.querySelectorAll('.btn-primary:not(.btn-phone)');
     applyButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             if (this.getAttribute('href') === '#apply' || this.id === 'start-application') {
                 e.preventDefault();
-                // Placeholder - replace with real Jotform or application flow
-                alert('Application system integration pending. For now, please call (619) 927-ROCK to get started!');
+                // Open Jotform application in new tab
+                window.open('https://form.jotform.com/242456789012345', '_blank');
+            }
+        });
+    });
+
+    // Phone CTA tracking
+    const phoneButtons = document.querySelectorAll('.btn-phone');
+    phoneButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Track phone clicks for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    'event_category': 'CTA',
+                });
             }
         });
     });

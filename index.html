@@ -1,244 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>America's Best Lenders | Non-QM Mortgage Heroes</title>
-    <meta name="description" content="Your superhero squad for Non-QM mortgages nationwide. Simple. Fast. The Best.">
-    <link rel="icon" type="image/jpeg" href="ABL Shield copy (00B).jpg">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>America's Best Lenders — Simple. No Nonsense. The Best.</title>
+<meta name="description" content="America's Best Lenders shops a network of 48 lenders for HELOCs, purchase loans, cash-out refinance and Non-QM mortgages. Simple. No Nonsense. The Best.">
+<link rel="icon" type="image/jpeg" href="assets/abl-shield.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="floating-bar.css?v=2">
+<style>
+  :root {
+    --bg-0: #0b0f1e;
+    --bg-1: #0f162c;
+    --ink: #f5f7fc;
+    --ink-dim: #98a2ba;
+    --red: #d7263d;
+    --red-bright: #ef3a50;
+    --blue: #4f8ef7;
+    --gradient: linear-gradient(90deg, var(--red), var(--blue));
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-0);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(79,142,247,.16), transparent 60%),
+      radial-gradient(90% 60% at 10% 110%, rgba(215,38,61,.12), transparent 60%),
+      var(--bg-0);
+    overflow-x: hidden;
+  }
+
+  .page { max-width: 1400px; margin: 0 auto; padding: 40px 48px 56px; }
+
+  /* ── Nav ─────────────────────────────── */
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand-mark {
+    width: 56.9px; height: 56.9px; border-radius: 17.3px;
+    background: linear-gradient(135deg, #4f8ef7, #d7263d);
+    padding: 2px; display: grid; place-items: center;
+    flex: 0 0 auto;
+  }
+  .brand-mark img {
+    width: 100%; height: 100%; border-radius: 15.3px; object-fit: cover;
+    display: block;
+  }
+  .brand-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .brand-title {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 21.5px; letter-spacing: 0.015em; white-space: nowrap;
+  }
+  .brand-title .accent {
+    background: linear-gradient(90deg, var(--red-bright), var(--blue));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .brand-sub {
+    font-size: 9.8px; letter-spacing: 0.22em; color: var(--ink-dim);
+    font-weight: 600; white-space: nowrap;
+  }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    color: var(--ink-dim); font-size: 14.6px; text-decoration: none;
+    font-weight: 500; transition: color .15s ease;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.nav-cta { color: var(--ink); font-weight: 600; }
+
+  /* ── Hero (Wedge) ────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(320px, 395px) 1fr;
+    gap: 56px;
+    min-height: 660px;
+    align-items: center;
+    padding-top: 48px;
+  }
+  .hero-left h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 64.3px;
+    line-height: 1.03;
+    letter-spacing: -0.028em;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+  .grad {
+    background: linear-gradient(90deg, var(--red-bright), var(--blue));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .lede {
+    font-size: 17.3px; color: var(--ink-dim); max-width: 560px;
+    line-height: 1.6; margin: 0;
+  }
+  .features { display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
+  .feature { display: flex; gap: 14px; align-items: flex-start; }
+  .feature-icon {
+    width: 42px; height: 42px; border-radius: 999px;
+    border: 1px solid rgba(215, 38, 61, .55);
+    display: grid; place-items: center; color: var(--ink);
+    flex: 0 0 auto;
+  }
+  .feature-icon svg {
+    width: 19px; height: 19px; stroke: currentColor; fill: none;
+    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .feature strong { font-size: 16.2px; font-weight: 600; }
+  .feature p { color: var(--ink-dim); font-size: 14.4px; margin: 2px 0 0; line-height: 1.45; }
+
+  .cta-row {
+    margin-top: 36px;
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .cta-button {
+    background: linear-gradient(135deg, #ef3a50, #b01227);
+    color: #fff; padding: 15px 32px; border-radius: 999px;
+    font-weight: 600; text-decoration: none; font-size: 16.2px;
+    box-shadow: 0 10px 30px rgba(215, 38, 61, .35);
+    transition: transform .15s ease, filter .15s ease;
+  }
+  .cta-button:hover { filter: brightness(1.08); }
+  .cta-note { color: var(--ink-dim); font-size: 14.6px; }
+  .cta-note strong { color: var(--ink); }
+  .cta-note a { color: inherit; text-decoration: none; }
+
+  .hero-photo-frame {
+    clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%);
+    min-height: 660px;
+    display: flex;
+    overflow: hidden;
+  }
+  .hero-photo-frame img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center right; display: block;
+  }
+
+  /* ── Get started band ────────────────── */
+  .get-started {
+    margin-top: 64px;
+    background: var(--bg-1);
+    border: 1px solid rgba(152, 162, 186, .18);
+    border-radius: 24px;
+    padding: 40px 44px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    scroll-margin-top: 24px;
+  }
+  .get-started h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32.2px; margin: 0 0 6px; letter-spacing: -0.02em;
+  }
+  .get-started p { margin: 0; color: var(--ink-dim); font-size: 15.3px; }
+  .get-started .cta-row { margin-top: 0; }
+
+  .legal {
+    margin-top: 28px;
+    color: rgba(152, 162, 186, .65);
+    font-size: 11.4px; line-height: 1.6; text-align: center;
+  }
+
+  /* ── Mobile ──────────────────────────── */
+  @media (max-width: 980px) {
+    .page { padding: 20px 20px 28px; }
+    .nav-links { display: none; }
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      gap: 32px;
+      padding-top: 28px;
+    }
+    .hero-left h1 { font-size: 42px; }
+    .hero-photo-frame { clip-path: none; min-height: 360px; border-radius: 24px; }
+    .get-started { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  }
+</style>
 </head>
 <body>
-    <header class="hero-header">
-        <nav class="top-nav">
-            <div class="logo">
-                <div class="superhero-badge"></div>
-                <span class="brand-name">America's Best Lenders</span>
-            </div>
-            <div class="nav-links">
-                <a href="#rates">Rates</a>
-                <a href="#loan-types">Loan Options</a>
-                <a href="#about">About</a>
-                <a href="tel:6199277625" class="phone-cta">📞 (619) 927-ROCK</a>
-                <a href="#apply" class="apply-btn">Apply Now</a>
-            </div>
-        </nav>
-        
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="super-headline">Non-QM<br><span class="accent">Mortgages</span></h1>
-                <p class="hero-tagline">WE SHOP 48 DIFFERENT LENDERS SO YOU DON'T HAVE TO</p>
-                <div class="hero-features">
-                    <div class="feature-badge">✓ Bank Statement Loans</div>
-                    <div class="feature-badge">✓ DSCR Investment Loans</div>
-                    <div class="feature-badge">✓ Asset Depletion</div>
-                    <div class="feature-badge">✓ No Tax Returns</div>
-                </div>
-                <div class="hero-cta">
-                    <a href="#apply" class="btn-primary">Get Your Rate in 3 Minutes</a>
-                    <p class="cta-subtitle">No credit impact • No hidden fees</p>
-                </div>
-            </div>
-            <div class="hero-character">
-                <div class="superhero-mascot"></div>
-            </div>
+<div class="page">
+
+  <nav class="page-nav">
+    <div class="brand">
+      <div class="brand-mark"><img src="assets/abl-shield.jpg" alt="America's Best Lenders shield"></div>
+      <div class="brand-text">
+        <div class="brand-title">AMERICA&rsquo;S <span class="accent">BEST</span> LENDERS</div>
+        <div class="brand-sub">SIMPLE. NO NONSENSE. THE BEST.</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Loan Products</a>
+      <a href="#get-started" class="nav-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Simple. No Nonsense.<br><span class="grad">The Best.</span></h1>
+      <p class="lede">We shop 48 different lenders so you don't have to &mdash; the right HELOC, purchase loan, cash-out refinance or Non-QM mortgage without the runaround.</p>
+
+      <div class="features" id="features">
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg></div>
+          <div><strong>HELOCs</strong><p>Fast home-equity lines with easy terms and fast draws.</p></div>
         </div>
-    </header>
-
-    <section id="rates" class="rates-section">
-        <h2 class="section-title">Today's Non-QM Rates</h2>
-        <p class="section-subtitle">Personalized rates. Lightning fast.</p>
-        
-        <div class="rate-cards">
-            <div class="rate-card">
-                <h3 class="loan-type">Bank Statement Loan</h3>
-                <div class="rate-display">
-                    <div class="rate-number">7.25%</div>
-                    <div class="rate-label">Starting Rate</div>
-                </div>
-                <ul class="loan-features">
-                    <li>12 or 24-month bank statements</li>
-                    <li>Self-employed & business owners</li>
-                    <li>Purchase or refinance</li>
-                    <li>Up to $3.5M loan amount</li>
-                </ul>
-                <a href="#apply" class="btn-secondary">Get My Rate</a>
-            </div>
-
-            <div class="rate-card featured">
-                <div class="popular-badge">Most Popular</div>
-                <h3 class="loan-type">DSCR Investment Loan</h3>
-                <div class="rate-display">
-                    <div class="rate-number">7.49%</div>
-                    <div class="rate-label">Starting Rate</div>
-                </div>
-                <ul class="loan-features">
-                    <li>No income verification</li>
-                    <li>Rental property cash flow</li>
-                    <li>Fix & flip or long-term rental</li>
-                    <li>Portfolio loans available</li>
-                </ul>
-                <a href="#apply" class="btn-primary">Get My Rate</a>
-            </div>
-
-            <div class="rate-card">
-                <h3 class="loan-type">Asset Depletion Loan</h3>
-                <div class="rate-display">
-                    <div class="rate-number">7.75%</div>
-                    <div class="rate-label">Starting Rate</div>
-                </div>
-                <ul class="loan-features">
-                    <li>Qualify with assets, not income</li>
-                    <li>Retirees & high-net-worth</li>
-                    <li>Stocks, bonds, retirement accounts</li>
-                    <li>Up to $4M loan amount</li>
-                </ul>
-                <a href="#apply" class="btn-secondary">Get My Rate</a>
-            </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3m-5 1 3 3m-6 1 3 3"/></svg></div>
+          <div><strong>Purchase Loans</strong><p>First home or next investment &mdash; bought at the best rate.</p></div>
         </div>
-
-        <p class="rates-disclaimer">Rates current as of May 17, 2026. Sample rates for qualified borrowers. Actual rate depends on credit, property, and loan details.</p>
-    </section>
-
-    <section id="loan-types" class="loan-options-section">
-        <h2 class="section-title">Our Superpowers</h2>
-        <p class="section-subtitle">The loan types traditional banks won't touch</p>
-        
-        <div class="superpowers-grid">
-            <div class="superpower-card">
-                <div class="power-icon">🏠</div>
-                <h3>Bank Statement Loans</h3>
-                <p>Self-employed? Business owner? Show us your bank statements instead of tax returns.</p>
-            </div>
-            
-            <div class="superpower-card">
-                <div class="power-icon">🏢</div>
-                <h3>DSCR Investment Loans</h3>
-                <p>Qualify based on rental income, not your W-2. Perfect for real estate investors.</p>
-            </div>
-            
-            <div class="superpower-card">
-                <div class="power-icon">💰</div>
-                <h3>Asset Depletion</h3>
-                <p>Retired with assets? Qualify using your investment and retirement accounts.</p>
-            </div>
-            
-            <div class="superpower-card">
-                <div class="power-icon">🌎</div>
-                <h3>Foreign National Loans</h3>
-                <p>No U.S. credit? No problem. We work with international buyers.</p>
-            </div>
-            
-            <div class="superpower-card">
-                <div class="power-icon">📈</div>
-                <h3>1099 & Gig Worker Loans</h3>
-                <p>Freelance or contract income? We get it. And we can help.</p>
-            </div>
-            
-            <div class="superpower-card">
-                <div class="power-icon">🔨</div>
-                <h3>Fix & Flip Loans</h3>
-                <p>Fast funding for investors. Rehab budgets included. Portfolio options.</p>
-            </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10m2.8-8H9.7a1.9 1.9 0 0 0 0 3.8h4.2a1.9 1.9 0 0 1 0 3.8H9.2"/></svg></div>
+          <div><strong>Cash-Out Refinance</strong><p>Turn your equity into working capital for anything.</p></div>
         </div>
-    </section>
-
-    <section class="why-section">
-        <div class="why-content">
-            <h2 class="section-title">ONE CALL. 48 LENDERS.</h2>
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="why-number">48</div>
-                    <div class="why-text">Lenders in our network = best rate guaranteed</div>
-                </div>
-                <div class="why-item">
-                    <div class="why-number">SIMPLE</div>
-                    <div class="why-text">So simple my Mom could beat it</div>
-                </div>
-                <div class="why-item">
-                    <div class="why-number">FLEXIBLE</div>
-                    <div class="why-text">It's about YOUR schedule, not ours</div>
-                </div>
-                <div class="why-item">
-                    <div class="why-number">$0</div>
-                    <div class="why-text">Hidden fees. Seriously. Zero.</div>
-                </div>
-            </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5c0 5 3.4 8.4 8 10 4.6-1.6 8-8 8-10V6L12 3z"/></svg></div>
+          <div><strong>Non-QM Loans</strong><p>Bank statement, DSCR &amp; asset depletion programs.</p></div>
         </div>
-    </section>
-
-    <section class="testimonials-section">
-        <h2 class="section-title">Real Heroes. Real Stories.</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Traditional banks kept denying me because I'm self-employed. America's Best Lenders got me approved in 48 hours using my bank statements. Best rate I found anywhere."</p>
-                <p class="testimonial-author">— Carlos M., San Diego</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"I'm a real estate investor buying my 7th property. DSCR loan with no income docs? Game changer. Closed in 21 days."</p>
-                <p class="testimonial-author">— Jennifer T., Phoenix</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Retired with assets but no traditional income. They helped me qualify using my investment accounts. So easy."</p>
-                <p class="testimonial-author">— Robert K., Austin</p>
-            </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H13l1-4z"/></svg></div>
+          <div><strong>3-Minute Application</strong><p>No credit impact &bull; No hidden fees &bull; Heroes answer fast.</p></div>
         </div>
-    </section>
+      </div>
 
-    <section id="apply" class="apply-section">
-        <div class="apply-content">
-            <h2 class="section-title">Ready to Be a Hero?</h2>
-            <p class="section-subtitle">Get your personalized Non-QM rate in 3 minutes</p>
-            <div class="apply-cta">
-                <a href="tel:6199277625" class="btn-phone">📞 Call (619) 927-ROCK</a>
-                <span class="or">or</span>
-                <a href="#" class="btn-primary" id="start-application">Start Application</a>
-            </div>
-            <p class="cta-subtitle">No credit impact • No obligation • No BS</p>
-        </div>
-    </section>
+      <div class="cta-row">
+        <a class="cta-button" href="#get-started">Apply Now</a>
+        <div class="cta-note"><strong>No credit impact</strong> &bull; <a href="tel:+18587695139">Call (858) 769-5139</a></div>
+      </div>
+    </div>
 
-    <footer id="about" class="footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="logo">
-                    <div class="superhero-badge">ABL</div>
-                    <span class="brand-name">America's Best Lenders</span>
-                </div>
-                <p>A division of KW Mortgage Enterprises Inc.</p>
-                <p>Licensed nationwide Non-QM mortgage broker</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Phone: (619) 927-ROCK (7625)</p>
-                <p>5234 Cushman Place #300<br>San Diego, CA 92110</p>
-                <p>Hours: 8 AM – 8 PM PT</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Loan Options</h4>
-                <ul>
-                    <li><a href="#rates">Bank Statement Loans</a></li>
-                    <li><a href="#rates">DSCR Investment Loans</a></li>
-                    <li><a href="#rates">Asset Depletion Loans</a></li>
-                    <li><a href="#rates">Foreign National Loans</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-legal">
-            <p>© 2026 America's Best Lenders | A division of KW Mortgage Enterprises Inc.</p>
-            <p>Equal Housing Lender | DRE# 02162832 | NMLS# 2282987 | Licensed nationwide</p>
-            <p><small>Rates and programs subject to change without notice. All loans subject to credit approval. This is not a commitment to lend. Restrictions may apply.</small></p>
-        </div>
-    </footer>
+    <div class="hero-photo">
+      <div class="hero-photo-frame">
+        <img src="assets/hero.jpg" alt="Mortgage superheroes at work">
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section class="get-started" id="get-started">
+    <div>
+      <h2>Ready to Get Started?</h2>
+      <p>Three minutes. One short form. Real lenders compete for your loan.</p>
+    </div>
+    <div class="cta-row">
+      <a class="cta-button track-click" href="https://form.jotform.com/242456789012345" target="_blank" rel="noopener">Start Application</a>
+      <div class="cta-note"><strong>No credit impact</strong> &bull; <a href="tel:+18587695139">Call (858) 769-5139</a></div>
+    </div>
+  </section>
+
+  <p class="legal">&copy; 2026 America's Best Lenders &bull; A division of KW Mortgage Enterprises Inc. &bull; Equal Housing Lender &bull; NMLS #2282987. Rates and programs subject to change without notice. Not a commitment to lend.</p>
+
+  <nav class="footer-bar" role="navigation" aria-label="App actions">
+    <a class="footer-btn active" data-home="1" aria-label="Home" href="#top"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg></a>
+    <div class="fb-divider"></div>
+    <a class="footer-btn" aria-label="Call" href="tel:+18587695139"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    <div class="fb-divider"></div>
+    <a class="footer-btn" aria-label="Text" href="sms:+18587695139"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+    <div class="fb-divider"></div>
+    <a class="footer-btn" aria-label="Email" href="mailto:glenn.wilbor@birdrockfunding.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+    <div class="fb-divider"></div>
+    <button class="footer-btn" data-share="1" aria-label="Share"><svg viewBox="0 0 24 24"><path d="M14 5 21 12 14 19"/><path d="M21 12H9a6 6 0 0 0-6 6v1"/></svg></button>
+  </nav>
+  <script src="floating-bar.js?v=2"></script>
+
 </body>
 </html>
