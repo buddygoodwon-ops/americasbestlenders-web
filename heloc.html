@@ -150,48 +150,9 @@ width: 100%; height: 100%; object-fit: cover;
 object-position: center right; display: block;
 }
 
-/* ── AI Underwriting band ────────────── */
-.ai-band {
-margin-top: 64px;
-background: var(--bg-1);
-border: 1px solid rgba(79, 142, 247, .28);
-border-radius: 24px;
-padding: 44px;
-}
-.ai-band-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-.ai-badge {
-font-family: 'Space Grotesk', sans-serif;
-font-size: 12px; font-weight: 700; letter-spacing: .12em;
-text-transform: uppercase;
-color: var(--bg-0);
-background: linear-gradient(90deg, var(--red-bright), var(--blue));
-padding: 5px 12px; border-radius: 999px;
-}
-.ai-band h2 {
-font-family: 'Space Grotesk', sans-serif;
-font-size: 32.2px; margin: 0; letter-spacing: -0.02em;
-}
-.ai-band > p.lede {
-margin: 10px 0 28px; max-width: 720px;
-}
-.ai-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 22px;
-}
-.ai-card {
-background: rgba(255,255,255,.03);
-border: 1px solid rgba(152, 162, 186, .16);
-border-radius: 16px;
-padding: 22px;
-}
-.ai-card strong { font-size: 16px; font-weight: 600; display: block; margin-bottom: 6px; }
-.ai-card p { color: var(--ink-dim); font-size: 14.2px; line-height: 1.5; margin: 0; }
-.ai-band .cta-row { margin-top: 32px; }
-
 /* ── Get started band ────────────────── */
 .get-started {
-margin-top: 32px;
+margin-top: 64px;
 background: var(--bg-1);
 border: 1px solid rgba(152, 162, 186, .18);
 border-radius: 24px;
@@ -226,8 +187,6 @@ padding-top: 28px;
 .hero-left h1 { font-size: 42px; }
 .hero-photo-frame { clip-path: none; min-height: 360px; border-radius: 24px; }
 .get-started { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-.ai-band { padding: 28px 20px; }
-.ai-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -288,32 +247,6 @@ padding-top: 28px;
 <div class="hero-photo-frame">
 <img src="assets/hero.jpg" alt="Mortgage superheroes at work">
 </div>
-</div>
-</section>
-
-<section class="ai-band" id="ai-heloc">
-<div class="ai-band-head">
-<span class="ai-badge">New</span>
-</div>
-<h2>AI EquityLines. Approved in an hour.</h2>
-<p class="lede">Our AI-powered HELOC underwriting skips the slow stuff. No appraisal. No documentation. No hassle &mdash; just a soft credit pull, a fast answer, and cash in as little as 5 days if you like the terms.</p>
-<div class="ai-grid">
-<div class="ai-card">
-<strong>AI Does the Underwriting</strong>
-<p>Loan approvals in one hour or less, with no appraisal and no documentation required.</p>
-</div>
-<div class="ai-card">
-<strong>Rates From Mid-7% to Mid-12%</strong>
-<p>Our AI calculates your risk factor from loan-to-value ratio, FICO score, and debt-to-income ratio to determine your rate.</p>
-</div>
-<div class="ai-card">
-<strong>Soft Pull Only</strong>
-<p>Just a soft credit check &mdash; no inquiry on your credit report, and we don&rsquo;t even need your Social Security number.</p>
-</div>
-</div>
-<div class="cta-row">
-<a class="cta-button" href="#get-started">See What We Can Offer</a>
-<div class="cta-note">Nothing to lose &bull; Like the terms? Closing takes 5 days.</div>
 </div>
 </section>
 
