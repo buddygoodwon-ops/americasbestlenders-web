@@ -1,83 +1,105 @@
 /* Floating pill footer bar — app-style persistent actions (Glenn 9/3)
-   Same pattern as his reference (centered pill, icon buttons, dividers). Styles the America's Best Lenders light theme (active = hero red). */
+Same pattern as his reference (centered pill, icon buttons, dividers). Styles the America's Best Lenders light theme (active = hero red). */
 :root{
-  --fb-bg: rgba(255,255,255,.96);
-  --fb-border: rgba(0,0,0,.10);
-  --fb-icon: #111111;
-  --fb-muted: #9a9a9a;
-  --fb-shadow:0 8px 24px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.06);
+--fb-bg: rgba(255,255,255,.96);
+--fb-border: rgba(0,0,0,.10);
+--fb-icon: #111111;
+--fb-muted: #9a9a9a;
+--fb-shadow:0 8px 24px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.06);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --fb-bg: rgba(22,22,22,.92);
-    --fb-border: rgba(255,255,255,.10);
-    --fb-icon: #f5f5f5;
-    --fb-shadow:0 8px 24px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.3);
-  }
+:root:not([data-theme="light"]){
+--fb-bg: rgba(22,22,22,.92);
+--fb-border: rgba(255,255,255,.10);
+--fb-icon: #f5f5f5;
+--fb-shadow:0 8px 24px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.3);
+}
 }
 :root[data-theme="dark"]{
-  --fb-bg: rgba(22,22,22,.92);
-  --fb-border: rgba(255,255,255,.10);
-  --fb-icon: #f5f5f5;
-  --fb-shadow:0 8px 24px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.3);
+--fb-bg: rgba(22,22,22,.92);
+--fb-border: rgba(255,255,255,.10);
+--fb-icon: #f5f5f5;
+--fb-shadow:0 8px 24px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.3);
 }
 
 .footer-bar{
-  position:fixed;
-  left:50%;
-  bottom:28px;
-  transform:translateX(-50%);
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding:10px 14px;
-  background:var(--fb-bg);
-  border:1px solid var(--fb-border);
-  border-radius:999px;
-  box-shadow:var(--fb-shadow);
-  z-index:9998;
+position:fixed;
+left:50%;
+bottom:28px;
+transform:translateX(-50%);
+display:flex;
+align-items:center;
+gap:6px;
+padding:10px 14px;
+background:var(--fb-bg);
+border:1px solid var(--fb-border);
+border-radius:999px;
+box-shadow:var(--fb-shadow);
+z-index:9998;
 }
 .footer-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  background:transparent;
-  border:none;
-  cursor:pointer;
-  color:var(--fb-icon);
-  transition:background .15s ease, transform .15s ease;
-  text-decoration:none;
+display:flex;
+align-items:center;
+justify-content:center;
+width:44px;
+height:44px;
+border-radius:999px;
+background:transparent;
+border:none;
+cursor:pointer;
+color:var(--fb-icon);
+transition:background .15s ease, transform .15s ease;
+text-decoration:none;
 }
 .footer-btn:hover:not(.active){
-  background:rgba(0,0,0,.06);
-  transform:translateY(-1px);
+background:rgba(0,0,0,.06);
+transform:translateY(-1px);
 }
 .footer-btn:active{
-  transform:translateY(0);
+transform:translateY(0);
 }
 .footer-btn.active{
-  background:#DC143C;
-  color:#fff;
+background:#DC143C;
+color:#fff;
 }
 .footer-btn svg{
-  width:21px;
-  height:21px;
-  stroke:currentColor;
-  fill:none;
-  stroke-width:1.8;
-  stroke-linecap:round;
-  stroke-linejoin:round;
+width:21px;
+height:21px;
+stroke:currentColor;
+fill:none;
+stroke-width:1.8;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+.footer-btn-cta{
+width:auto;
+height:40px;
+padding:0 20px;
+border-radius:999px;
+background:linear-gradient(135deg, #b01227, #6e0c19);
+color:#fff;
+font-size:14.2px;
+font-weight:600;
+white-space:nowrap;
+box-shadow:0 6px 16px rgba(215,38,61,.35);
+}
+.footer-btn-cta:hover{
+background:linear-gradient(135deg, #b01227, #6e0c19);
+filter:brightness(1.08);
+transform:translateY(-1px);
+}
+.footer-btn-cta.active{
+background:linear-gradient(135deg, #b01227, #6e0c19);
+color:#fff;
 }
 .fb-divider{
-  width:1px;
-  height:26px;
-  background:var(--fb-border);
-  margin:0 2px;
+width:1px;
+height:26px;
+background:var(--fb-border);
+margin:0 2px;
 }
 @media (max-width: 480px){
-  .footer-bar{ bottom:18px; padding:8px 10px; gap:4px; }
-  .footer-btn{ width:40px; height:40px; }
+.footer-bar{ bottom:18px; padding:8px 10px; gap:4px; }
+.footer-btn{ width:40px; height:40px; }
+.footer-btn-cta{ padding:0 14px; font-size:12.8px; height:36px; }
 }

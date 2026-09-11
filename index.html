@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="floating-bar.css?v=2">
+<link rel="stylesheet" href="floating-bar.css?v=3">
 <style>
 :root {
 --bg-0: #0b0f1e;
@@ -96,11 +96,11 @@ position: relative;
 }
 .hero-left {
 background: #ffffff;
-padding: 40px 90px 40px 0;
+padding: 40px 130px 40px 0;
 position: relative;
 z-index: 2;
-margin-right: -120px;
-clip-path: polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0% 100%);
+margin-right: -180px;
+clip-path: polygon(0 0, 100% 0, calc(100% - 180px) 100%, 0% 100%);
 }
 .hero-left h1 {
 font-family: 'Space Grotesk', sans-serif;
@@ -156,7 +156,7 @@ transition: transform .15s ease, filter .15s ease;
 .cta-note a { color: inherit; text-decoration: none; }
 
 .hero-photo-frame {
-clip-path: polygon(120px 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(180px 0%, 100% 0%, 100% 100%, 0% 100%);
 min-height: 660px;
 display: flex;
 overflow: hidden;
@@ -220,7 +220,7 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 
 <nav class="page-nav">
 <div class="brand">
-<div class="brand-mark"><img src="abl-logo-rocks.jpg" alt="America's Best Lenders"></div>
+<div class="brand-mark"><img src="abl-logo-rocks.jpg?v=2" alt="America's Best Lenders"></div>
 </div>
 <div class="nav-links">
 <a href="#features">Loan Products</a>
@@ -283,7 +283,7 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 <p class="legal">&copy; 2026 America's Best Lenders &bull; A division of KW Mortgage Enterprises Inc. &bull; Equal Housing Lender &bull; NMLS #2282987. Rates and programs subject to change without notice. Not a commitment to lend.</p>
 
 <nav class="footer-bar" role="navigation" aria-label="App actions">
-<a class="footer-btn active" data-home="1" aria-label="Home" href="#top"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg></a>
+<a class="footer-btn footer-btn-cta" aria-label="Get a Rate Quote" href="#get-started">Get A Rate Quote</a>
 <div class="fb-divider"></div>
 <a class="footer-btn" aria-label="Call" href="tel:+18588322378"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 <div class="fb-divider"></div>
@@ -293,7 +293,7 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 <div class="fb-divider"></div>
 <button class="footer-btn" data-share="1" aria-label="Share"><svg viewBox="0 0 24 24"><path d="M14 5 21 12 14 19"/><path d="M21 12H9a6 6 0 0 0-6 6v1"/></svg></button>
 </nav>
-<script src="floating-bar.js?v=2"></script>
+<script src="floating-bar.js?v=3"></script>
 
 </body>
 </html>
