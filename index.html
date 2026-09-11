@@ -90,17 +90,24 @@ display: grid;
 grid-template-columns: minmax(320px, 395px) 1fr;
 gap: 0;
 min-height: 660px;
-align-items: center;
-padding-top: 48px;
+align-items: stretch;
+padding-top: 0;
+margin-top: -40px;
 position: relative;
 }
 .hero-left {
-background: #ffffff;
-padding: 40px 130px 40px 0;
+background: #2b1d13 url('wood-bg.jpg') center/cover;
+padding: 88px 150px 40px 48px;
+margin-left: -48px;
+margin-top: 0;
 position: relative;
 z-index: 2;
-margin-right: -180px;
-clip-path: polygon(0 0, 100% 0, calc(100% - 180px) 100%, 0% 100%);
+margin-right: -260px;
+clip-path: polygon(0 0, 100% 0, calc(100% - 260px) 100%, 0% 100%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-shadow: inset 0 0 0 2000px rgba(20, 12, 6, .38);
 }
 .hero-left h1 {
 font-family: 'Space Grotesk', sans-serif;
@@ -110,13 +117,13 @@ letter-spacing: -0.028em;
 font-weight: 700;
 margin: 0 0 20px;
 }
-.hero-left .usa-white { color: #1c2333; }
-.hero-left .lede { color: #4b5468; }
-.hero-left .feature strong { color: #1c2333; }
-.hero-left .feature p { color: #5b6478; }
-.hero-left .feature-icon { color: #1c2333; border-color: rgba(176, 18, 39, .45); }
-.hero-left .cta-note { color: #5b6478; }
-.hero-left .cta-note strong { color: #1c2333; }
+.hero-left .usa-white { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,.45); }
+.hero-left .lede { color: #f0e6d8; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+.hero-left .feature strong { color: #ffffff; }
+.hero-left .feature p { color: #ddd0bd; }
+.hero-left .feature-icon { color: #ffffff; border-color: rgba(255, 255, 255, .45); }
+.hero-left .cta-note { color: #ddd0bd; }
+.hero-left .cta-note strong { color: #ffffff; }
 .usa-red { color: var(--red-bright); }
 .usa-white { color: var(--ink); }
 .usa-blue { color: var(--blue); }
@@ -156,7 +163,7 @@ transition: transform .15s ease, filter .15s ease;
 .cta-note a { color: inherit; text-decoration: none; }
 
 .hero-photo-frame {
-clip-path: polygon(180px 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(260px 0%, 100% 0%, 100% 100%, 0% 100%);
 min-height: 660px;
 display: flex;
 overflow: hidden;
@@ -205,6 +212,7 @@ padding-top: 28px;
 .hero-left {
 clip-path: none;
 margin-right: 0;
+margin-left: 0;
 padding: 32px 28px;
 border-radius: 24px;
 box-shadow: 0 20px 50px rgba(0,0,0,.18);
@@ -220,7 +228,7 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 
 <nav class="page-nav">
 <div class="brand">
-<div class="brand-mark"><img src="abl-logo-rocks.jpg?v=2" alt="America's Best Lenders"></div>
+<div class="brand-mark"><img src="abl-logo-bw.jpg" alt="America's Best Lenders"></div>
 </div>
 <div class="nav-links">
 <a href="#features">Loan Products</a>
