@@ -94,16 +94,15 @@ padding-top: 48px;
 }
 .hero-left h1 {
 font-family: 'Space Grotesk', sans-serif;
-font-size: 64.3px;
-line-height: 1.03;
+font-size: clamp(38px, 4.6vw, 64.3px);
+line-height: 1.05;
 letter-spacing: -0.028em;
 font-weight: 700;
 margin: 0 0 20px;
 }
-.grad {
-background: linear-gradient(90deg, var(--red-bright), var(--blue));
--webkit-background-clip: text; background-clip: text; color: transparent;
-}
+.usa-red { color: var(--red-bright); }
+.usa-white { color: var(--ink); }
+.usa-blue { color: var(--blue); }
 .lede {
 font-size: 17.3px; color: var(--ink-dim); max-width: 560px;
 line-height: 1.6; margin: 0;
@@ -211,7 +210,7 @@ padding-top: 28px;
 
 <section class="hero">
 <div class="hero-left">
-<h1>Cash-Out Refinance.<br><span class="grad">Your Equity, Unlocked.</span></h1>
+<h1><span class="usa-white">Cash-Out&nbsp;Refinance.</span><br><span class="usa-red">Your Equity,</span> <span class="usa-blue">Unlocked.</span></h1>
 <p class="lede">Turn the equity you&rsquo;ve built into working capital for anything &mdash; renovations, debt payoff, investments. We shop 50 different lenders so you get the best rate.</p>
 
 <div class="features" id="features">

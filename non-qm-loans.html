@@ -94,16 +94,15 @@ padding-top: 48px;
 }
 .hero-left h1 {
 font-family: 'Space Grotesk', sans-serif;
-font-size: 64.3px;
-line-height: 1.03;
+font-size: clamp(38px, 4.6vw, 64.3px);
+line-height: 1.05;
 letter-spacing: -0.028em;
 font-weight: 700;
 margin: 0 0 20px;
 }
-.grad {
-background: linear-gradient(90deg, var(--red-bright), var(--blue));
--webkit-background-clip: text; background-clip: text; color: transparent;
-}
+.usa-red { color: var(--red-bright); }
+.usa-white { color: var(--ink); }
+.usa-blue { color: var(--blue); }
 .lede {
 font-size: 17.3px; color: var(--ink-dim); max-width: 560px;
 line-height: 1.6; margin: 0;
@@ -211,7 +210,7 @@ padding-top: 28px;
 
 <section class="hero">
 <div class="hero-left">
-<h1>Non-QM Loans.<br><span class="grad">When Traditional Says No.</span></h1>
+<h1><span class="usa-white">Non-QM&nbsp;Loans.</span><br><span class="usa-red">When Traditional</span> <span class="usa-blue">Says No.</span></h1>
 <p class="lede">Self-employed? Investor? Non-traditional income? The new way mortgages are done &mdash; we shop 50 different lenders offering bank statement, DSCR, and asset depletion programs without the runaround.</p>
 
 <div class="features" id="features">

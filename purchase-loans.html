@@ -94,16 +94,15 @@ padding-top: 48px;
 }
 .hero-left h1 {
 font-family: 'Space Grotesk', sans-serif;
-font-size: 64.3px;
-line-height: 1.03;
+font-size: clamp(38px, 4.6vw, 64.3px);
+line-height: 1.05;
 letter-spacing: -0.028em;
 font-weight: 700;
 margin: 0 0 20px;
 }
-.grad {
-background: linear-gradient(90deg, var(--red-bright), var(--blue));
--webkit-background-clip: text; background-clip: text; color: transparent;
-}
+.usa-red { color: var(--red-bright); }
+.usa-white { color: var(--ink); }
+.usa-blue { color: var(--blue); }
 .lede {
 font-size: 17.3px; color: var(--ink-dim); max-width: 560px;
 line-height: 1.6; margin: 0;
@@ -211,7 +210,7 @@ padding-top: 28px;
 
 <section class="hero">
 <div class="hero-left">
-<h1>Purchase Loans.<br><span class="grad">Bought Right.</span></h1>
+<h1><span class="usa-white">Purchase&nbsp;Loans.</span><br><span class="usa-red">Bought</span> <span class="usa-blue">Right.</span></h1>
 <p class="lede">Whether it&rsquo;s your first home or your next investment property, we shop 50 different lenders so you buy at the best rate &mdash; without the runaround. We're here 24/7, cause it's about your schedule, not ours.</p>
 
 <div class="features" id="features">
