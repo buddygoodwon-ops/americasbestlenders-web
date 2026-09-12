@@ -317,5 +317,31 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 </nav>
 <script src="floating-bar.js?v=3"></script>
 
+  <script>
+  window.chatwootSettings = {
+    launcherTitle: "Chat with Buddy",
+    position: 'right',
+    locale: 'en',
+    darkMode: 'dark',
+    type: 'standard'
+  };
+  (function(d,t) {
+    var BASE_URL="https://app.chatwoot.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'w75DuTkaqM5nry2hyCZPVpFz',
+        baseUrl: BASE_URL
+      });
+      var st = document.createElement('style');
+      st.textContent = '#chatwoot_widget_launcher, .woot-widget-bubble, .chatwoot-launcher, ' +
+        '.woot-widget-bubble-icon { background: linear-gradient(90deg, #d7263d, #4f8ef7) !important; border-radius: 14px; }';
+      document.head.appendChild(st);
+    }
+  })(document,"script");
+</script>
 </body>
 </html>
