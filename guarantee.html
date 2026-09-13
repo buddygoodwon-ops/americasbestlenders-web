@@ -254,26 +254,28 @@ text-align: center;
 .g-hero .brand-mark img { width: 100%; height: 100%; border-radius: 17.5px; object-fit: cover; display: block; }
 .g-hero h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 40px; margin: 0 0 6px; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,.45); }
 .g-hero .accent { background: linear-gradient(90deg, #4f8ef7, #9fc4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.g-hero .accent-red { background: linear-gradient(135deg, #b01227, #6e0c19); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.g-hero .accent-red { background: linear-gradient(135deg, #e8203f, #8a0f22); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .g-hero .g-sub { font-size: 13px; letter-spacing: 0.14em; font-weight: 700; text-transform: uppercase; color: #ffffff; opacity: .85; margin-bottom: 22px; }
 .g-hero p.g-lede { font-size: 18px; line-height: 1.6; color: #ffffff; max-width: 640px; margin: 0 auto; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
 .g-hero .cta-row { justify-content: center; margin-top: 28px; }
+.g-hero .cta-note { color: #ffffff; font-size: 18px; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+.g-hero .cta-note a { color: #ffffff; }
 
 .g-section { margin-top: 48px; }
 .g-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin: 0 0 18px; }
-.g-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.g-cards { display: flex; flex-direction: column; gap: 22px; }
 .g-card {
-background: var(--bg-1);
-border: 1px solid rgba(255,255,255,.08);
-border-radius: 18px;
-padding: 24px;
+display: flex;
+gap: 16px;
+align-items: flex-start;
 }
 .g-card .g-num {
+flex: 0 0 auto;
 width: 34px; height: 34px; border-radius: 10px;
-background: var(--gradient); color: #fff; font-weight: 700;
-display: grid; place-items: center; margin-bottom: 14px; font-size: 15px;
+background: linear-gradient(90deg, #4f8ef7, #9fc4ff); color: #fff; font-weight: 700;
+display: grid; place-items: center; font-size: 15px;
 }
-.g-card h3 { margin: 0 0 8px; font-size: 16.5px; }
+.g-card h3 { margin: 0 0 4px; font-size: 16.5px; }
 .g-card p { margin: 0; color: var(--ink-dim); font-size: 14.4px; line-height: 1.5; }
 
 .g-fine {
@@ -291,7 +293,6 @@ line-height: 1.6;
 @media (max-width: 780px) {
 .g-hero { padding: 40px 24px; }
 .g-hero h1 { font-size: 30px; }
-.g-cards { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -319,18 +320,18 @@ line-height: 1.6;
 <div class="g-cards">
 <div class="g-card">
 <div class="g-num">1</div>
-<h3>Get a Competing Offer</h3>
-<p>Already shopping around? Get a Loan Estimate from another lender for the same loan program and terms.</p>
+<div><h3>Get a Competing Offer</h3>
+<p>Already shopping around? Get a Loan Estimate from another lender for the same loan program and terms.</p></div>
 </div>
 <div class="g-card">
 <div class="g-num">2</div>
-<h3>Upload It To Us</h3>
-<p>Send us that Loan Estimate. We&rsquo;ll compare rate, fees and terms side-by-side, apples to apples.</p>
+<div><h3>Upload It To Us</h3>
+<p>Send us that Loan Estimate. We&rsquo;ll compare rate, fees and terms side-by-side, apples to apples.</p></div>
 </div>
 <div class="g-card">
 <div class="g-num">3</div>
-<h3>We Match, Beat, or Pay You</h3>
-<p>We&rsquo;ll match or beat it on the day you lock. If we can&rsquo;t, we write you a check for $500 &mdash; no hard feelings, Super Powered!</p>
+<div><h3>We Match, Beat, or Pay You</h3>
+<p>We&rsquo;ll match or beat it on the day you lock. If we can&rsquo;t, we write you a check for $500 &mdash; no hard feelings, Super Powered!</p></div>
 </div>
 </div>
 </section>
@@ -356,8 +357,6 @@ line-height: 1.6;
 <a class="footer-btn" aria-label="Text" href="sms:+18588322378"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
 <div class="fb-divider"></div>
 <a class="footer-btn" aria-label="Email" href="mailto:glenn.wilbor@birdrockfunding.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
-<div class="fb-divider"></div>
-<button class="footer-btn" data-share="1" aria-label="Share"><svg viewBox="0 0 24 24"><path d="M14 5 21 12 14 19"/><path d="M21 12H9a6 6 0 0 0-6 6v1"/></svg></button>
 </nav>
 <script src="floating-bar.js?v=3"></script>
 
