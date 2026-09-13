@@ -88,6 +88,26 @@ margin-top: 2px; white-space: nowrap;
 background: linear-gradient(90deg, #4f8ef7, #9fc4ff);
 -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+.brand-guarantee-block {
+text-align: center;
+margin: 36px 0 0;
+}
+.brand-guarantee-block + .cta-row {
+margin-top: 14px;
+}
+.brand-guarantee-block .brand-sub {
+display: block;
+white-space: normal;
+}
+.brand-guarantee-block .brand-super {
+display: block;
+font-size: 26px;
+letter-spacing: 0.02em;
+margin-top: 10px;
+white-space: normal;
+background: linear-gradient(90deg, #4a90d9, #071c40);
+-webkit-background-clip: text; background-clip: text; color: transparent;
+}
 .nav-links { display: flex; gap: 28px; align-items: center; }
 .nav-links a {
 color: var(--ink-dim); font-size: 14.6px; text-decoration: none;
@@ -130,12 +150,14 @@ letter-spacing: -0.028em;
 font-weight: 700;
 margin: 0 0 20px;
 }
+.hero-left .accent-red { background: linear-gradient(135deg, #e8203f, #8a0f22); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-left .accent { background: linear-gradient(90deg, #4f8ef7, #9fc4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-left .usa-white { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,.45); }
 .hero-left .lede { color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
 .hero-left .feature strong { color: #ffffff; }
 .hero-left .feature p { color: #ffffff; }
 .hero-left .feature-icon { color: #ffffff; border-color: rgba(255, 255, 255, .45); }
-.hero-left .cta-note { color: #ffffff; }
+.hero-left .cta-note { color: #ffffff; font-weight: 800; font-size: 20px; }
 .hero-left .cta-note strong { color: #ffffff; }
 .hero-left .brand-title { color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,.4); }
 .hero-left .brand-title .accent { background: none; -webkit-background-clip: initial; background-clip: initial; color: #ffffff; }
@@ -154,6 +176,7 @@ width: 42px; height: 42px; border-radius: 999px;
 border: 1px solid rgba(215, 38, 61, .55);
 display: grid; place-items: center; color: var(--ink);
 flex: 0 0 auto;
+font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
 }
 .feature-icon svg {
 width: 19px; height: 19px; stroke: currentColor; fill: none;
@@ -241,44 +264,6 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 </head>
 <body>
 <div class="page">
-<style>
-.g-wrap { max-width: 880px; margin: 0 auto; padding-top: 28px; }
-.hero-left h1 .accent-red { background: linear-gradient(135deg, #e8203f, #8a0f22); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.hero-left h1 .accent { background: linear-gradient(90deg, #4f8ef7, #9fc4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.g-call-note, .g-call-note a { color: #ffffff !important; font-weight: 800 !important; font-size: 24px !important; }
-
-.g-section { margin-top: 48px; }
-.g-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin: 0 0 18px; }
-.g-cards { display: flex; flex-direction: column; gap: 22px; }
-.g-card {
-display: flex;
-gap: 16px;
-align-items: flex-start;
-}
-.g-card .g-num {
-flex: 0 0 auto;
-width: 34px; height: 34px; border-radius: 10px;
-background: linear-gradient(90deg, #4f8ef7, #9fc4ff); color: #fff; font-weight: 700;
-display: grid; place-items: center; font-size: 15px;
-}
-.g-card h3 { margin: 0 0 4px; font-size: 16.5px; }
-.g-card p { margin: 0; color: var(--ink-dim); font-size: 14.4px; line-height: 1.5; }
-
-.g-fine {
-margin-top: 40px;
-padding: 22px 24px;
-border-radius: 16px;
-background: rgba(255,255,255,.03);
-border: 1px solid rgba(255,255,255,.06);
-color: var(--ink-dim);
-font-size: 13.2px;
-line-height: 1.6;
-}
-.g-fine strong { color: var(--ink); }
-
-@media (max-width: 780px) {
-}
-</style>
 
 <nav class="page-nav">
 <div class="nav-links" style="margin-left:auto;">
@@ -294,15 +279,30 @@ line-height: 1.6;
 <div class="brand-title">AMERICA&rsquo;S <span class="accent">BEST</span> LENDERS</div>
 </div>
 </div>
-<h1><span class="accent-red">America&rsquo;s</span> <span class="usa-white">Best</span> <span class="accent">Guarantee</span></h1>
+<h1><span class="accent-red">America&rsquo;s</span> <span class="usa-white">Best</span><br><span class="accent">Guarantee</span></h1>
 <p class="lede">We Guarantee we will match or beat any competitor&rsquo;s rate and fees on the day you lock in. Just upload the competing lender&rsquo;s Loan Estimate &mdash; and if we can&rsquo;t beat it, we&rsquo;ll write you a check for $500, just for shopping your loan with us.</p>
+
+<div class="features" id="how-it-works">
+<div class="feature">
+<div class="feature-icon">1</div>
+<div><strong>Get a Competing Offer</strong><p>Already shopping around? Get a Loan Estimate from another lender for the same loan program and terms.</p></div>
+</div>
+<div class="feature">
+<div class="feature-icon">2</div>
+<div><strong>Upload It To Us</strong><p>Send us that Loan Estimate. We&rsquo;ll compare rate, fees and terms side-by-side, apples to apples.</p></div>
+</div>
+<div class="feature">
+<div class="feature-icon">3</div>
+<div><strong>We Match, Beat, or Pay You</strong><p>We&rsquo;ll match or beat it on the day you lock. If we can&rsquo;t, we write you a check for $500 &mdash; no hard feelings, Super Powered!</p></div>
+</div>
+</div>
 
 <div class="brand-guarantee-block">
 <div class="brand-sub">TRUTH. JUSTICE. AND THE AMERICAN DREAM!</div>
 </div>
 <div class="cta-row">
 <a class="cta-button track-click" href="https://form.jotform.com/242456789012345" target="_blank" rel="noopener">Get Started</a>
-<div class="cta-note g-call-note">OR Call Us <a href="tel:+18588322378">858-832-BEST</a></div>
+<div class="cta-note">OR Call Us <a href="tel:+18588322378">858-832-BEST</a></div>
 </div>
 </div>
 
@@ -313,38 +313,19 @@ line-height: 1.6;
 </div>
 </section>
 
-<div class="g-wrap">
-
-<section class="g-section">
-<h2>How the Guarantee Works</h2>
-<div class="g-cards">
-<div class="g-card">
-<div class="g-num">1</div>
-<div><h3>Get a Competing Offer</h3>
-<p>Already shopping around? Get a Loan Estimate from another lender for the same loan program and terms.</p></div>
-</div>
-<div class="g-card">
-<div class="g-num">2</div>
-<div><h3>Upload It To Us</h3>
-<p>Send us that Loan Estimate. We&rsquo;ll compare rate, fees and terms side-by-side, apples to apples.</p></div>
-</div>
-<div class="g-card">
-<div class="g-num">3</div>
-<div><h3>We Match, Beat, or Pay You</h3>
-<p>We&rsquo;ll match or beat it on the day you lock. If we can&rsquo;t, we write you a check for $500 &mdash; no hard feelings, Super Powered!</p></div>
-</div>
-</div>
-</section>
-
-<section class="g-section">
+<section class="get-started" id="get-started">
+<div>
 <h2>Why We Do This</h2>
-<p style="color:var(--ink-dim); font-size:15.3px; line-height:1.6; max-width:720px;">We shop 50 different lenders on every loan so you don&rsquo;t have to. We&rsquo;re confident that beats going it alone with a single bank or broker &mdash; and we&rsquo;re willing to put money behind it. Simple. No Nonsense. The Best.</p>
+<p>We shop 50 different lenders on every loan so you don&rsquo;t have to. Simple. No Nonsense. The Best.</p>
+</div>
+<div class="cta-row">
+<a class="cta-button track-click" href="https://form.jotform.com/242456789012345" target="_blank" rel="noopener">Get Started</a>
+<div class="cta-note">OR Call Us <a href="tel:+18588322378">858-832-BEST</a></div>
+</div>
 </section>
 
-<div class="g-fine">
-<strong>Guarantee terms:</strong> To qualify, the competing Loan Estimate must be for the same loan program, loan amount, property, lock period and closing timeline. We will compare rate, discount points and lender fees on the day we can lock your rate. If our combined rate and fees are not equal to or better than the competing offer, we will send a $500 check upon closing of your loan with America&rsquo;s Best Lenders. One guarantee redemption per household. Not valid in combination with other offers. Rates, programs and terms subject to change without notice. Not a commitment to lend.
-</div>
-
+<div style="margin-top:40px; padding:22px 24px; border-radius:16px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); color:var(--ink-dim); font-size:13.2px; line-height:1.6;">
+<strong style="color:var(--ink);">Guarantee terms:</strong> To qualify, the competing Loan Estimate must be for the same loan program, loan amount, property, lock period and closing timeline. We will compare rate, discount points and lender fees on the day we can lock your rate. If our combined rate and fees are not equal to or better than the competing offer, we will send a $500 check upon closing of your loan with America&rsquo;s Best Lenders. One guarantee redemption per household. Not valid in combination with other offers. Rates, programs and terms subject to change without notice. Not a commitment to lend.
 </div>
 
 <p class="legal">&copy; 2026 America's Best Lenders &bull; A division of KW Mortgage Enterprises Inc. &bull; Equal Housing Lender &bull; NMLS #2282987. Rates and programs subject to change without notice. Not a commitment to lend.</p>
