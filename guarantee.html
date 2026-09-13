@@ -243,23 +243,9 @@ box-shadow: 0 20px 50px rgba(0,0,0,.18);
 <div class="page">
 <style>
 .g-wrap { max-width: 880px; margin: 0 auto; padding-top: 28px; }
-.g-hero {
-background: #2b1d13 url('wood-bg.jpg') center/cover;
-box-shadow: inset 0 0 0 2000px rgba(20, 12, 6, .38);
-border-radius: 24px;
-padding: 56px 48px;
-text-align: center;
-}
-.g-hero .brand-mark { width: 64px; height: 64px; border-radius: 19.5px; background: #b01227; padding: 2px; display: grid; place-items: center; margin: 0 auto 18px; }
-.g-hero .brand-mark img { width: 100%; height: 100%; border-radius: 17.5px; object-fit: cover; display: block; }
-.g-hero h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 40px; margin: 0 0 6px; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,.45); }
-.g-hero .accent { background: linear-gradient(90deg, #4f8ef7, #9fc4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.g-hero .accent-red { background: linear-gradient(135deg, #e8203f, #8a0f22); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.g-hero .g-sub { font-size: 13px; letter-spacing: 0.14em; font-weight: 700; text-transform: uppercase; color: #ffffff; opacity: .85; margin-bottom: 22px; }
-.g-hero p.g-lede { font-size: 18px; line-height: 1.6; color: #ffffff; max-width: 640px; margin: 0 auto; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
-.g-hero .cta-row { justify-content: center; margin-top: 28px; }
-.g-hero .cta-note { color: #ffffff; font-size: 18px; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
-.g-hero .cta-note a { color: #ffffff; }
+.hero-left h1 .accent-red { background: linear-gradient(135deg, #e8203f, #8a0f22); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-left h1 .accent { background: linear-gradient(90deg, #4f8ef7, #9fc4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.g-call-note, .g-call-note a { color: #ffffff !important; font-weight: 700 !important; font-size: 20px !important; }
 
 .g-section { margin-top: 48px; }
 .g-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin: 0 0 18px; }
@@ -291,8 +277,6 @@ line-height: 1.6;
 .g-fine strong { color: var(--ink); }
 
 @media (max-width: 780px) {
-.g-hero { padding: 40px 24px; }
-.g-hero h1 { font-size: 30px; }
 }
 </style>
 
@@ -302,18 +286,34 @@ line-height: 1.6;
 </div>
 </nav>
 
-<div class="g-wrap">
-
-<section class="g-hero">
+<section class="hero">
+<div class="hero-left">
+<div class="brand hero-brand">
 <div class="brand-mark"><img src="assets/abl-shield.jpg" alt="America's Best Lenders shield"></div>
-<h1><span class="accent-red">America&rsquo;s</span> Best <span class="accent">Guarantee</span></h1>
-<div class="g-sub">Truth. Justice. And The American Dream!</div>
-<p class="g-lede">We Guarantee we will match or beat any competitor&rsquo;s rate and fees on the day you lock in. Just upload the competing lender&rsquo;s Loan Estimate &mdash; and if we can&rsquo;t beat it, we&rsquo;ll write you a check for $500, just for shopping your loan with us.</p>
+<div class="brand-text">
+<div class="brand-title">AMERICA&rsquo;S <span class="accent">BEST</span> LENDERS</div>
+</div>
+</div>
+<h1><span class="accent-red">America&rsquo;s</span> <span class="usa-white">Best</span> <span class="accent">Guarantee</span></h1>
+<p class="lede">We Guarantee we will match or beat any competitor&rsquo;s rate and fees on the day you lock in. Just upload the competing lender&rsquo;s Loan Estimate &mdash; and if we can&rsquo;t beat it, we&rsquo;ll write you a check for $500, just for shopping your loan with us.</p>
+
+<div class="brand-guarantee-block">
+<div class="brand-sub">TRUTH. JUSTICE. AND THE AMERICAN DREAM!</div>
+</div>
 <div class="cta-row">
 <a class="cta-button track-click" href="https://form.jotform.com/242456789012345" target="_blank" rel="noopener">Get Started</a>
-<div class="cta-note">OR Call Us <a href="tel:+18588322378">858-832-BEST</a></div>
+<div class="cta-note g-call-note">OR Call Us <a href="tel:+18588322378">858-832-BEST</a></div>
+</div>
+</div>
+
+<div class="hero-photo">
+<div class="hero-photo-frame">
+<img src="assets/hero.jpg" alt="Mortgage superheroes at work">
+</div>
 </div>
 </section>
+
+<div class="g-wrap">
 
 <section class="g-section">
 <h2>How the Guarantee Works</h2>
